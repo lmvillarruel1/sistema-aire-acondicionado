@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Preguntados Climatización Automotriz | CFP 401</title>
+
+    <!-- Conectamos la hoja de estilos -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Conectamos JavaScript cuando el HTML ya está cargado -->
+    <script src="juego.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="logo">
+            <span class="icono-logo">❄️</span>
+            <div>
+                <h1>Preguntados</h1>
+                <p>Climatización Automotriz · CFP N.º 401</p>
+            </div>
+        </div>
+
+        <span class="etiqueta">¡Desafío técnico!</span>
+    </header>
+
+    <!-- PRESENTACIÓN DEL JUEGO -->
+    <section id="presentacion" class="presentacion">
+        <div class="presentacion-texto">
+            <span class="insignia">🎮 JUEGO INTERACTIVO</span>
+            <h2>¿Cuánto sabés de climatización automotriz?</h2>
+            <p>
+                Poné a prueba tus conocimientos sobre el circuito de aire
+                acondicionado, componentes, refrigerante, diagnóstico
+                y mantenimiento.
+            </p>
+
+            <label for="nombreJugador">¿Cómo te llamás?</label>
+            <input
+                type="text"
+                id="nombreJugador"
+                placeholder="Escribí tu nombre"
+                maxlength="25"
+            >
+
+            <button id="btnComenzar" class="boton boton-principal">
+                ¡Comenzar a jugar! ▶
+            </button>
+        </div>
+
+        <div class="ilustracion" aria-hidden="true">
+            <span>🌡️</span>
+            <div class="computadora">🚗</div>
+            <span>❄️</span>
+            <span>🔧</span>
+        </div>
+    </section>
+
+    <!-- ÁREA PRINCIPAL DEL JUEGO: empieza oculta -->
+    <main id="zonaJuego" class="zona-juego oculto">
+
+        <!-- PANEL LATERAL CON ESTADÍSTICAS -->
+        <aside class="panel-estadisticas">
+            <div class="estadistica">
+                <span>🏆</span>
+                <p>Puntaje</p>
+                <strong id="puntaje">0</strong>
+            </div>
+
+            <div class="estadistica">
+                <span>📝</span>
+                <p>Pregunta</p>
+                <strong id="contador">1 / 20</strong>
+            </div>
+
+            <div class="estadistica">
+                <span>✅</span>
+                <p>Correctas</p>
+                <strong id="correctas">0</strong>
+            </div>
+        </aside>
+
+        <!-- PANEL DE PREGUNTAS Y RESPUESTAS -->
+        <section class="panel-preguntas">
+
+            <div class="barra-superior">
+                <span id="categoriaActual">📚 Climatización</span>
+                <span id="progresoTexto">Pregunta 1 de 20</span>
+            </div>
+
+            <div class="barra-progreso">
+                <div id="progreso" class="progreso"></div>
+            </div>
+
+            <h2 id="pregunta">La pregunta aparecerá aquí.</h2>
+
+            <!-- JavaScript crea aquí las cuatro opciones -->
+            <div id="opciones" class="opciones"></div>
+
+            <!-- Aquí se informa si la respuesta fue correcta -->
+            <p id="mensaje" class="mensaje" aria-live="polite"></p>
+
+            <button id="btnSiguiente" class="boton boton-siguiente oculto">
+                Siguiente pregunta →
+            </button>
+
+        </section>
+
+        <!-- CATEGORÍAS -->
+        <aside class="panel-categorias">
+            <h2>📚 Categorías</h2>
+
+            <div class="categoria">
+                <span>❄️</span> Climatización
+            </div>
+
+            <div class="categoria">
+                <span>🩺</span> Diagnóstico
+            </div>
+
+            <div class="categoria">
+                <span>🛠️</span> Averías
+            </div>
+
+            <div class="categoria">
+                <span>⚙️</span> Componentes
+            </div>
+
+            <div class="categoria">
+                <span>📡</span> Sensores
+            </div>
+
+            <div class="categoria">
+                <span>🔧</span> Mantenimiento
+            </div>
+
+            <div class="categoria">
+                <span>🛡️</span> Seguridad
+            </div>
+
+            <div class="categoria">
+                <span>🛢️</span> Lubricación
+            </div>
+
+            <div class="categoria">
+                <span>🔁</span> Circuito
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- PANTALLA DE RESULTADOS -->
+    <section id="resultadoFinal" class="resultado-final oculto">
+        <div class="trofeo">🏆</div>
+        <h2>¡Terminaste el desafío!</h2>
+
+        <p id="saludoFinal"></p>
+
+        <div class="resultado-puntaje">
+            <span>Tu puntaje</span>
+            <strong id="puntajeFinal">0</strong>
+            <span>puntos</span>
+        </div>
+
+        <p id="mensajeFinal"></p>
+
+        <p id="resumenFinal"></p>
+
+        <button id="btnReiniciar" class="boton boton-principal">
+            🔄 Jugar nuevamente
+        </button>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie">
+        <p>❄️ Preguntados Climatización Automotriz</p>
+        <p>Proyecto educativo de estudiantes del Centro de Formación Profesional N.º 401</p>
+        <p>¡Gracias por participar de nuestra exposición anual!</p>
+    </footer>
+
+</body>
+</html>
